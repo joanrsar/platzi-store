@@ -1,0 +1,19 @@
+<div *ngIf="(product$ | async) as product">
+    <div>
+        <img [src]="product.image" alt="">
+    </div>
+    <div>
+        <ul>
+            <li>Nombre: {{ product.title }}</li>
+            <li>Precio: {{ product.price | currency}}</li>
+        </ul>
+        <p>{{ product.description }}</p>
+    </div>
+    <button (click)='crearProduct()'>Crear producto</button>
+    <button (click)='updateProduct()'>Actualizar producto</button>
+    <button (click)='deleteProduct()'>Eliminar producto</button>
+    <button (click)='getRandomUsers()'>Random Users</button>
+    <button (click)='getDataFile()'>Leer archivo</button>
+    <button (click)='getFile()'>Descargar archivo</button>
+</div>
+
